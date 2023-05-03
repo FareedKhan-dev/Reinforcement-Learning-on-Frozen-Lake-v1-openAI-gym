@@ -69,7 +69,7 @@ After training the agent on default parameters for the specified number of episo
 
 The following diagram illustrates the average reward and number of steps per episode observed after running the script for 1000 episodes.
 
-<svg src="/images/Picture2.sv"  width="600" height="300">
+![Frozen-Lake-and-table](/images/Picture6.svg)
 
 ## Installation
 
