@@ -41,8 +41,12 @@ for i in range(num_episodes):
     
     # The Q-Table learning algorithm
     while not done:
+        try:
+            s = s[0]
+        except TypeError:
+            pass
         a = np.argmax(Q[s,:] + np.random.randn(1,env.action_space.n)*(1./(i+1)))
-        s_, r, done, _ = env.step(a)
+        s_, r, done, _ , _ = env.step(a)
         
         # update Q values
         Q[s,a] = Q[s,a] + lr*(r + num_episodes*np.max(Q[s_,:]) - Q[s,a])
